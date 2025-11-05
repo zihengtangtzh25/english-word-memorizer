@@ -29,6 +29,48 @@
             overflow: hidden;
         }
         
+        /* 导航栏样式 */
+        .navbar {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .nav-link.active {
+            background: rgba(255, 255, 255, 0.3);
+            font-weight: bold;
+        }
+        
         header {
             background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
             color: white;
@@ -300,6 +342,55 @@
             margin-top: 30px;
         }
         
+        /* 词汇表样式 */
+        .vocabulary-card {
+            display: none;
+        }
+        
+        .vocabulary-list {
+            max-height: 500px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+        
+        .vocabulary-item {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.3s;
+        }
+        
+        .vocabulary-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .vocabulary-word {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #2c3e50;
+        }
+        
+        .vocabulary-definition {
+            color: #666;
+            margin: 5px 0;
+        }
+        
+        .vocabulary-chinese {
+            color: #e74c3c;
+            font-style: italic;
+        }
+        
+        .search-box {
+            margin-bottom: 20px;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        
         @media (max-width: 600px) {
             .stats, .result-stats, .buttons {
                 flex-direction: column;
@@ -316,37 +407,58 @@
             .definition {
                 font-size: 1.2rem;
             }
+            
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- 导航栏 -->
+        <nav class="navbar">
+            <a href="#" class="nav-brand">英语学习工具</a>
+            <div class="nav-links">
+                <a href="#" class="nav-link active" data-page="quiz">单词背诵</a>
+                <a href="#" class="nav-link" data-page="vocabulary">词汇表</a>
+                <a href="vocabulary-tester/index.html" class="nav-link">词汇量测试</a>
+                <a href="grammar-exercises/index.html" class="nav-link">语法练习</a>
+            </div>
+        </nav>
+        
         <header>
             <h1>英语单词背诵程序</h1>
             <p class="subtitle">根据英文释义，输入正确的英文单词</p>
         </header>
         
         <div class="content">
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-value" id="current-word">1</div>
-                    <div class="stat-label">当前单词</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value" id="total-words">3</div>
-                    <div class="stat-label">总单词数</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value" id="correct-count">0</div>
-                    <div class="stat-label">正确</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value" id="incorrect-count">0</div>
-                    <div class="stat-label">错误</div>
-                </div>
-            </div>
-            
+            <!-- 单词背诵页面 -->
             <div class="card" id="quiz-card">
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="current-word">1</div>
+                        <div class="stat-label">当前单词</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="total-words">3</div>
+                        <div class="stat-label">总单词数</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="correct-count">0</div>
+                        <div class="stat-label">正确</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="incorrect-count">0</div>
+                        <div class="stat-label">错误</div>
+                    </div>
+                </div>
+                
                 <div class="card-title">英文释义</div>
                 <div class="definition" id="definition"></div>
                 
@@ -366,6 +478,7 @@
                 </div>
             </div>
             
+            <!-- 结果页面 -->
             <div class="card result-card" id="result-card">
                 <div class="result-title">背诵完成!</div>
                 
@@ -396,27 +509,26 @@
                     <button class="restart-btn" id="restart-btn">重新开始</button>
                 </div>
             </div>
+            
+            <!-- 词汇表页面 -->
+            <div class="card vocabulary-card" id="vocabulary-card">
+                <div class="card-title">完整词汇表</div>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="搜索单词或释义...">
+                </div>
+                <div class="vocabulary-list" id="vocabulary-list"></div>
+            </div>
         </div>
         
         <footer>
             <p>英语单词背诵程序 &copy; 2023</p>
         </footer>
     </div>
-<div style="text-align: center; margin: 30px 0;">
-    <h2>英语学习工具集</h2>
-    <div style="display: flex; justify-content: center; gap: 20px; margin: 20px 0;">
-        <a href="index.html" style="padding: 10px 20px; background: #4b6cb7; color: white; text-decoration: none; border-radius: 5px;">
-            单词背诵
-        </a>
-        <a href="vocabulary-tester/index.html" style="padding: 10px 20px; background: #2c5530; color: white; text-decoration: none; border-radius: 5px;">
-            词汇量测试
-        </a>
-    </div>
-</div>
+
     <script>
-        // 单词数据 - 仅使用三个样例
+        // 单词数据
         const words = [
-             { word: "sum up", definition: "to summarize", chinese: "总结；概括" },
+            { word: "sum up", definition: "to summarize", chinese: "总结；概括" },
             { word: "fade away", definition: "(of a person) to become very weak or ill and die", chinese: "（人）衰弱；病重死亡" },
             { word: "climate", definition: "the regular pattern of weather conditions of a particular place", chinese: "气候" },
             { word: "billion", definition: "one thousand million", chinese: "十亿" },
@@ -520,7 +632,6 @@
             { word: "in addition", definition: "used when you want to mention another person or thing after something else", chinese: "除……以外（还）" },
             { word: "formal", definition: "(of a style of dress, speech, writing, behaviour, etc.) very correct and suitable for official or important occasions", chinese: "（穿着、言语、行为等）适合正式场合的；正规的；庄重的" }
         
-            
         ];
 
         // 应用状态
@@ -544,12 +655,16 @@
         const incorrectCountElement = document.getElementById('incorrect-count');
         const quizCard = document.getElementById('quiz-card');
         const resultCard = document.getElementById('result-card');
+        const vocabularyCard = document.getElementById('vocabulary-card');
         const finalCorrectElement = document.getElementById('final-correct');
         const finalIncorrectElement = document.getElementById('final-incorrect');
         const correctWordsList = document.getElementById('correct-words-list');
         const incorrectWordsList = document.getElementById('incorrect-words-list');
+        const vocabularyList = document.getElementById('vocabulary-list');
+        const searchInput = document.getElementById('search-input');
         const restartButton = document.getElementById('restart-btn');
         const shortcutHint = document.getElementById('shortcut-hint');
+        const navLinks = document.querySelectorAll('.nav-link');
 
         // 初始化应用
         function initApp() {
@@ -563,20 +678,79 @@
             // 显示第一个单词
             showWord();
             
+            // 初始化词汇表
+            renderVocabularyList();
+            
             // 添加事件监听器
             checkButton.addEventListener('click', checkAnswer);
             nextButton.addEventListener('click', nextWord);
             restartButton.addEventListener('click', restartQuiz);
+            searchInput.addEventListener('input', renderVocabularyList);
+            
+            // 添加导航事件监听器
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    switchPage(link.dataset.page);
+                });
+            });
             
             // 添加键盘事件监听器
             document.addEventListener('keydown', handleKeyPress);
+        }
+
+        // 页面切换函数
+        function switchPage(page) {
+            // 隐藏所有页面
+            quizCard.style.display = 'none';
+            resultCard.style.display = 'none';
+            vocabularyCard.style.display = 'none';
+            
+            // 显示目标页面
+            if (page === 'quiz') {
+                quizCard.style.display = 'block';
+            } else if (page === 'vocabulary') {
+                vocabularyCard.style.display = 'block';
+            }
+            
+            // 更新导航激活状态
+            navLinks.forEach(link => {
+                if (link.dataset.page === page) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        // 渲染词汇表
+        function renderVocabularyList() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const filteredWords = words.filter(word => 
+                word.word.toLowerCase().includes(searchTerm) ||
+                word.definition.toLowerCase().includes(searchTerm) ||
+                word.chinese.toLowerCase().includes(searchTerm)
+            );
+            
+            vocabularyList.innerHTML = '';
+            
+            filteredWords.forEach(word => {
+                const wordElement = document.createElement('div');
+                wordElement.className = 'vocabulary-item';
+                wordElement.innerHTML = `
+                    <div class="vocabulary-word">${word.word}</div>
+                    <div class="vocabulary-definition">${word.definition}</div>
+                    <div class="vocabulary-chinese">${word.chinese}</div>
+                `;
+                vocabularyList.appendChild(wordElement);
+            });
         }
 
         function handleKeyPress(e) {
             // 如果答案已检查，启用快捷键
             if (answerChecked) {
                 if (e.key === 'Enter') {
-                    e.preventDefault(); // 阻止默认行为
+                    e.preventDefault();
                     nextWord();
                 } else if (e.key === '9') {
                     e.preventDefault();
@@ -594,7 +768,6 @@
             }
         }
 
-  
         function showWord() {
             answerChecked = false;
             const currentWord = shuffledWords[currentIndex];
@@ -602,12 +775,12 @@
             answerInput.value = '';
             answerInput.focus();
             
-            // 重置UI状态 - 确保隐藏答案界面，显示输入界面
+            // 重置UI状态
             feedbackElement.style.display = 'none';
             nextButton.style.display = 'none';
             checkButton.style.display = 'block';
             shortcutHint.style.display = 'none';
-            answerInput.disabled = false; // 确保输入框可用
+            answerInput.disabled = false;
             
             currentWordElement.textContent = currentIndex + 1;
         }
@@ -617,7 +790,6 @@
             const userAnswer = answerInput.value.trim();
             const currentWord = shuffledWords[currentIndex].word;
             
-            // 严格验证：必须完全匹配
             const isCorrect = userAnswer === currentWord;
             
             if (isCorrect) {
@@ -632,19 +804,17 @@
                 incorrectWords.push(shuffledWords[currentIndex]);
             }
             
-            // 显示答案界面
             feedbackElement.style.display = 'block';
             checkButton.style.display = 'none';
             nextButton.style.display = 'block';
             shortcutHint.style.display = 'block';
-            answerInput.disabled = true; // 禁用输入框，防止继续输入
+            answerInput.disabled = true;
             answerChecked = true;
             
             updateStats();
         }
 
         function markAsCorrect() {
-            // 如果当前单词已经在错误列表中，移除它
             const currentWord = shuffledWords[currentIndex];
             const incorrectIndex = incorrectWords.findIndex(w => w.word === currentWord.word);
             if (incorrectIndex !== -1) {
@@ -652,7 +822,6 @@
                 incorrectAnswers--;
             }
             
-            // 如果当前单词不在正确列表中，添加它
             const correctIndex = correctWords.findIndex(w => w.word === currentWord.word);
             if (correctIndex === -1) {
                 correctWords.push(currentWord);
@@ -662,7 +831,6 @@
             feedbackElement.textContent = `已标记为正确！单词是：${currentWord.word}，中文释义：${currentWord.chinese}`;
             feedbackElement.className = 'feedback correct';
             
-            // 显示答案界面
             feedbackElement.style.display = 'block';
             checkButton.style.display = 'none';
             nextButton.style.display = 'block';
@@ -672,9 +840,7 @@
             updateStats();
         }
 
-        // 标记为错误
         function markAsIncorrect() {
-            // 如果当前单词已经在正确列表中，移除它
             const currentWord = shuffledWords[currentIndex];
             const correctIndex = correctWords.findIndex(w => w.word === currentWord.word);
             if (correctIndex !== -1) {
@@ -682,7 +848,6 @@
                 correctAnswers--;
             }
             
-            // 如果当前单词不在错误列表中，添加它
             const incorrectIndex = incorrectWords.findIndex(w => w.word === currentWord.word);
             if (incorrectIndex === -1) {
                 incorrectWords.push(currentWord);
@@ -692,7 +857,6 @@
             feedbackElement.textContent = `已标记为错误！单词是：${currentWord.word}，中文释义：${currentWord.chinese}`;
             feedbackElement.className = 'feedback incorrect';
             
-            // 显示答案界面
             feedbackElement.style.display = 'block';
             checkButton.style.display = 'none';
             nextButton.style.display = 'block';
@@ -703,9 +867,7 @@
         }
 
         function nextWord() {
-            // 重置答案检查状态
             answerChecked = false;
-            
             currentIndex++;
             
             if (currentIndex < shuffledWords.length) {
@@ -715,18 +877,14 @@
             }
         }
 
-        // 显示结果
         function showResults() {
-            
             quizCard.style.display = 'none';
             resultCard.style.display = 'block';
             document.querySelector('.result-title').textContent = '错误单词复习完成!';
             
-            
             finalCorrectElement.textContent = correctAnswers;
             finalIncorrectElement.textContent = incorrectAnswers;
             
-            // 显示正确单词列表
             correctWordsList.innerHTML = '';
             correctWords.forEach(word => {
                 const wordElement = document.createElement('div');
@@ -739,7 +897,6 @@
                 correctWordsList.appendChild(wordElement);
             });
             
-            // 显示错误单词列表
             incorrectWordsList.innerHTML = '';
             incorrectWords.forEach(word => {
                 const wordElement = document.createElement('div');
@@ -753,56 +910,27 @@
             });
         }
 
-        // // 重新开始
-        // function restartQuiz() {
-        //     currentIndex = 0;
-        //     correctAnswers = 0;
-        //     incorrectAnswers = 0;
-        //     correctWords = [];
-        //     incorrectWords = [];
-            
-        //     shuffledWords = [...words].sort(() => Math.random() - 0.5);
-            
-        //     quizCard.style.display = 'block';
-        //     resultCard.style.display = 'none';
-            
-        //     updateStats();
-        //     showWord();
-        // }
-        // 重新开始 - 只测试错误部分
-            function restartQuiz() {
-                // 如果错误单词列表为空，则显示提示
-                if (incorrectWords.length === 0) {
-                    alert('恭喜！没有需要复习的单词。');
-                    return;
-                }
-                
-                // 只使用错误单词作为新的测试列表
-                shuffledWords = [...incorrectWords].sort(() => Math.random() - 0.5);
-                currentIndex = 0;
-                // 重置错误计数，但保持正确计数不变
-                incorrectAnswers = 0;
-                
-                // 清空错误单词列表（将在测试过程中重新填充）
-                incorrectWords = [];
-                
-                // 重置答案检查状态
-                answerChecked = false;
-                
-                // 更新UI
-                totalWordsElement.textContent = shuffledWords.length;
-                updateStats();
-                
-                quizCard.style.display = 'block';
-                resultCard.style.display = 'none';
-                
-                showWord();
+        function restartQuiz() {
+            if (incorrectWords.length === 0) {
+                alert('恭喜！没有需要复习的单词。');
+                return;
             }
+            
+            shuffledWords = [...incorrectWords].sort(() => Math.random() - 0.5);
+            currentIndex = 0;
+            incorrectAnswers = 0;
+            incorrectWords = [];
+            answerChecked = false;
+            
+            totalWordsElement.textContent = shuffledWords.length;
+            updateStats();
+            
+            quizCard.style.display = 'block';
+            resultCard.style.display = 'none';
+            
+            showWord();
+        }
 
-        
-        
-
-        // 更新统计信息
         function updateStats() {
             correctCountElement.textContent = correctAnswers;
             incorrectCountElement.textContent = incorrectAnswers;
