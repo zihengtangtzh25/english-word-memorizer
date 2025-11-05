@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语词汇表</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4b6cb7;
+        }
+        
+        .vocabulary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .vocabulary-table th {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .vocabulary-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .vocabulary-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .vocabulary-table tr:hover {
+            background-color: #e3f2fd;
+            transition: background-color 0.3s;
+        }
+        
+        .word {
+            font-weight: bold;
+            color: #2c3e50;
+            width: 20%;
+        }
+        
+        .english-def {
+            width: 45%;
+        }
+        
+        .chinese-def {
+            width: 35%;
+        }
+        
+        .phrases-section {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .phrase-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ccc;
+        }
+        
+        .phrase-item:last-child {
+            border-bottom: none;
+        }
+        
+        .phrase {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .phrase-def {
+            color: #555;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            border-top: 1px solid #eaeaea;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .vocabulary-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .word, .english-def, .chinese-def {
+                white-space: nowrap;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>英语词汇表</h1>
+            <p class="subtitle">英文单词、英文释义与中文释义对照表</p>
+        </header>
+        
+        <div class="content">
+            <h2 class="section-title">词汇表</h2>
+            <table class="vocabulary-table">
+                <thead>
+                    <tr>
+                        <th class="word">英文</th>
+                        <th class="english-def">英文释义</th>
+                        <th class="chinese-def">中文释义</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="word">sum up</td>
+                        <td class="english-def">to summarize</td>
+                        <td class="chinese-def">总结；概括</td>
+                    </tr>
+                    <tr>
+                        <td class="word">fade away</td>
+                        <td class="english-def">(of a person) to become very weak or ill and die</td>
+                        <td class="chinese-def">（人）衰弱；病重死亡</td>
+                    </tr>
+                    <tr>
+                        <td class="word">climate</td>
+                        <td class="english-def">the regular pattern of weather conditions of a particular place</td>
+                        <td class="chinese-def">气候</td>
+                    </tr>
+                    <tr>
+                        <td class="word">billion</td>
+                        <td class="english-def">one thousand million</td>
+                        <td class="chinese-def">十亿</td>
+                    </tr>
+                    <tr>
+                        <td class="word">alarming</td>
+                        <td class="english-def">causing worry and fear</td>
+                        <td class="chinese-def">使人惊恐的；令人惊慌的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">rate</td>
+                        <td class="english-def">a measurement of the speed</td>
+                        <td class="chinese-def">速度；进度</td>
+                    </tr>
+                    <tr>
+                        <td class="word">predict</td>
+                        <td class="english-def">to say that something will happen in the future</td>
+                        <td class="chinese-def">预言；预告；预报</td>
+                    </tr>
+                    <tr>
+                        <td class="word">chain</td>
+                        <td class="english-def">a series of connected things or people; a series of connected metal rings, used for pulling or fastening things</td>
+                        <td class="chinese-def">一系列，一连串（人或事）；链子；锁链</td>
+                    </tr>
+                    <tr>
+                        <td class="word">hunt</td>
+                        <td class="english-def">to chase wild animals or birds in order to catch or kill them for food, sport or to make money</td>
+                        <td class="chinese-def">打猎；猎杀</td>
+                    </tr>
+                    <tr>
+                        <td class="word">agriculture</td>
+                        <td class="english-def">the science or practice of farming</td>
+                        <td class="chinese-def">农业；农学</td>
+                    </tr>
+                    <tr>
+                        <td class="word">figure</td>
+                        <td class="english-def">a number representing a particular amount, especially one given in official information</td>
+                        <td class="chinese-def">（代表数量，尤指官方资料中的）数字</td>
+                    </tr>
+                    <tr>
+                        <td class="word">significantly</td>
+                        <td class="english-def">being important enough to have an effect on something or to be noticed</td>
+                        <td class="chinese-def">有重大意义地；显著地；明显地</td>
+                    </tr>
+                    <tr>
+                        <td class="word">unfamiliar</td>
+                        <td class="english-def">strange</td>
+                        <td class="chinese-def">陌生的；不熟悉的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">youth</td>
+                        <td class="english-def">young people considered as a group; the time of life when a person is young, especially the time before a child becomes an adult</td>
+                        <td class="chinese-def">（统称）青年，年轻人；青年时期（尤指成年以前）</td>
+                    </tr>
+                    <tr>
+                        <td class="word">threaten</td>
+                        <td class="english-def">to be a danger to something</td>
+                        <td class="chinese-def">危及；对……构成威胁</td>
+                    </tr>
+                    <tr>
+                        <td class="word">extinction</td>
+                        <td class="english-def">a situation where a plant, an animal, a way of life, etc. no longer exists</td>
+                        <td class="chinese-def">灭绝，绝种</td>
+                    </tr>
+                    <tr>
+                        <td class="word">admit</td>
+                        <td class="english-def">to agree, often unwillingly, that something is true</td>
+                        <td class="chinese-def">（常指勉强）承认</td>
+                    </tr>
+                    <tr>
+                        <td class="word">somehow</td>
+                        <td class="english-def">for a reason that you don't know or understand; in a way that is not known or certain</td>
+                        <td class="chinese-def">不知为什么；以某种方式</td>
+                    </tr>
+                    <tr>
+                        <td class="word">measure</td>
+                        <td class="english-def">an official action that is done in order to achieve a particular aim</td>
+                        <td class="chinese-def">措施；方法</td>
+                    </tr>
+                    <tr>
+                        <td class="word">absolutely</td>
+                        <td class="english-def">used to emphasize that something is completely true</td>
+                        <td class="chinese-def">（强调真实无误）绝对地，完全地</td>
+                    </tr>
+                    <tr>
+                        <td class="word">contrast</td>
+                        <td class="english-def">to compare two things in order to show the differences between them</td>
+                        <td class="chinese-def">对比；对照</td>
+                    </tr>
+                    <tr>
+                        <td class="word">imply</td>
+                        <td class="english-def">to suggest that something is true or that you feel or think something, without saying so directly</td>
+                        <td class="chinese-def">暗示；暗指</td>
+                    </tr>
+                    <tr>
+                        <td class="word">major</td>
+                        <td class="english-def">very large or important</td>
+                        <td class="chinese-def">主要的；重要的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">available</td>
+                        <td class="english-def">that you can get, buy or find easily</td>
+                        <td class="chinese-def">可获得的；可购得的；可找到的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">option</td>
+                        <td class="english-def">choice</td>
+                        <td class="chinese-def">选择；可选择的事物</td>
+                    </tr>
+                    <tr>
+                        <td class="word">desire</td>
+                        <td class="english-def">a strong wish to have or do something</td>
+                        <td class="chinese-def">愿望；欲望；渴望</td>
+                    </tr>
+                    <tr>
+                        <td class="word">reduce</td>
+                        <td class="english-def">to make something less or smaller in size, quantity, price, etc.</td>
+                        <td class="chinese-def">减少，缩小（尺寸、数量、价格等）</td>
+                    </tr>
+                    <tr>
+                        <td class="word">design</td>
+                        <td class="english-def">to decide how something will look, work, etc., especially by drawing plans or making models</td>
+                        <td class="chinese-def">设计；制图；构思</td>
+                    </tr>
+                    <tr>
+                        <td class="word">balance</td>
+                        <td class="english-def">to give equal importance to two contrasting things or parts of something</td>
+                        <td class="chinese-def">同等重视（相对的两个事物或方面）</td>
+                    </tr>
+                    <tr>
+                        <td class="word">graduate</td>
+                        <td class="english-def">to get a degree from a university or college; a person who has a university degree</td>
+                        <td class="chinese-def">大学毕业；大学毕业生</td>
+                    </tr>
+                    <tr>
+                        <td class="word">plus</td>
+                        <td class="english-def">used to add more information</td>
+                        <td class="chinese-def">而且；此外；况且</td>
+                    </tr>
+                    <tr>
+                        <td class="word">eventually</td>
+                        <td class="english-def">at the end of a period of time</td>
+                        <td class="chinese-def">最后；终于</td>
+                    </tr>
+                    <tr>
+                        <td class="word">concerned</td>
+                        <td class="english-def">interested in something</td>
+                        <td class="chinese-def">感兴趣的；关切的；关注的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">fund</td>
+                        <td class="english-def">to provide money for something, usually something official</td>
+                        <td class="chinese-def">为……提供资金；拨款给</td>
+                    </tr>
+                    <tr>
+                        <td class="word">mirror</td>
+                        <td class="english-def">a piece of special flat glass that reflects images</td>
+                        <td class="chinese-def">镜子</td>
+                    </tr>
+                    <tr>
+                        <td class="word">tear</td>
+                        <td class="english-def">a drop of liquid that comes out of your eye when you cry</td>
+                        <td class="chinese-def">眼泪；泪珠；泪水</td>
+                    </tr>
+                    <tr>
+                        <td class="word">net</td>
+                        <td class="english-def">a type of material that is made of string, thread or wire tied together, with small spaces in between</td>
+                        <td class="chinese-def">网；网状物</td>
+                    </tr>
+                    <tr>
+                        <td class="word">string</td>
+                        <td class="english-def">material made of several threads twisted together, used for tying things together</td>
+                        <td class="chinese-def">细绳；线；带子</td>
+                    </tr>
+                    <tr>
+                        <td class="word">mud</td>
+                        <td class="english-def">wet earth that is soft and sticky</td>
+                        <td class="chinese-def">泥；淤泥</td>
+                    </tr>
+                    <tr>
+                        <td class="word">cloth</td>
+                        <td class="english-def">material made by weaving or knitting cotton, wool, silk, etc.</td>
+                        <td class="chinese-def">织物；布料</td>
+                    </tr>
+                    <tr>
+                        <td class="word">process</td>
+                        <td class="english-def">a series of things that are done in order to achieve a particular result</td>
+                        <td class="chinese-def">（为达到某一目标的）过程；进程</td>
+                    </tr>
+                    <tr>
+                        <td class="word">contact</td>
+                        <td class="english-def">to communicate with somebody, for example by telephone or letter</td>
+                        <td class="chinese-def">联系，联络（如用电话或信件）</td>
+                    </tr>
+                    <tr>
+                        <td class="word">madam</td>
+                        <td class="english-def">a formal way of speaking or writing to a woman</td>
+                        <td class="chinese-def">夫人；女士</td>
+                    </tr>
+                    <tr>
+                        <td class="word">advertise</td>
+                        <td class="english-def">to make something known to the public in order to encourage people to buy or to use it</td>
+                        <td class="chinese-def">做广告；登广告</td>
+                    </tr>
+                    <tr>
+                        <td class="word">therefore</td>
+                        <td class="english-def">used to introduce the logical result of something that has just been mentioned</td>
+                        <td class="chinese-def">因此；所以；因而</td>
+                    </tr>
+                    <tr>
+                        <td class="word">advertisement</td>
+                        <td class="english-def">a notice, picture or film telling people about a product, job or service</td>
+                        <td class="chinese-def">广告；启事</td>
+                    </tr>
+                    <tr>
+                        <td class="word">flight</td>
+                        <td class="english-def">a plane making a particular journey; a journey made by air, especially in a plane</td>
+                        <td class="chinese-def">航班飞机；班机；空中航行，航程</td>
+                    </tr>
+                    <tr>
+                        <td class="word">grateful</td>
+                        <td class="english-def">feeling or showing thanks because somebody has done something kind for you</td>
+                        <td class="chinese-def">感激的；表示感谢的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">faithfully</td>
+                        <td class="english-def">in a loyal way; accurately; carefully</td>
+                        <td class="chinese-def">忠实地；忠诚地；准确地；如实地</td>
+                    </tr>
+                    <tr>
+                        <td class="word">formal</td>
+                        <td class="english-def">(of a style of dress, speech, writing, behaviour, etc.) very correct and suitable for official or important occasions</td>
+                        <td class="chinese-def">（穿着、言语、行为等）适合正式场合的；正规的；庄重的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">official</td>
+                        <td class="english-def">agreed to, said, done, etc. by somebody who is in a position of authority</td>
+                        <td class="chinese-def">正式的；官方的；官方授权的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">fluent</td>
+                        <td class="english-def">able to speak, read or write a language, especially a foreign language, easily and well</td>
+                        <td class="chinese-def">（尤指外语）流利的，流畅的；熟练的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">exchange</td>
+                        <td class="english-def">to give something to somebody and at the same time receive the same type of thing from them</td>
+                        <td class="chinese-def">交换；交流</td>
+                    </tr>
+                    <tr>
+                        <td class="word">range</td>
+                        <td class="english-def">a variety of things of a particular type</td>
+                        <td class="chinese-def">一系列</td>
+                    </tr>
+                    <tr>
+                        <td class="word">brick</td>
+                        <td class="english-def">something used for building walls, houses and other buildings</td>
+                        <td class="chinese-def">砖；砖块</td>
+                    </tr>
+                    <tr>
+                        <td class="word">gain</td>
+                        <td class="english-def">an advantage or improvement</td>
+                        <td class="chinese-def">好处；利益；改进</td>
+                    </tr>
+                    <tr>
+                        <td class="word">attract</td>
+                        <td class="english-def">to interest you and make you want it</td>
+                        <td class="chinese-def">吸引；使喜爱</td>
+                    </tr>
+                    <tr>
+                        <td class="word">shark</td>
+                        <td class="english-def">a large sea fish with very sharp teeth and a pointed fin on its back</td>
+                        <td class="chinese-def">鲨鱼</td>
+                    </tr>
+                    <tr>
+                        <td class="word">target</td>
+                        <td class="english-def">an object, a person or a place that people aim at when attacking; a result that you try to achieve</td>
+                        <td class="chinese-def">（攻击的）目标，对象；目标；指标</td>
+                    </tr>
+                    <tr>
+                        <td class="word">approach</td>
+                        <td class="english-def">to come near to somebody /something in distance or time</td>
+                        <td class="chinese-def">（在距离或时间上）靠近，接近</td>
+                    </tr>
+                    <tr>
+                        <td class="word">attack</td>
+                        <td class="english-def">an act of using violence to try to hurt or kill somebody; to use violence to try to hurt or kill somebody</td>
+                        <td class="chinese-def">袭击；攻击</td>
+                    </tr>
+                    <tr>
+                        <td class="word">sharp</td>
+                        <td class="english-def">having a fine edge or point, especially of something that can cut or make a hole in something</td>
+                        <td class="chinese-def">锋利的；尖的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">skin</td>
+                        <td class="english-def">the layer of tissue that covers the body</td>
+                        <td class="chinese-def">皮；皮肤</td>
+                    </tr>
+                    <tr>
+                        <td class="word">strength</td>
+                        <td class="english-def">the quality of being physically strong</td>
+                        <td class="chinese-def">体力；力气；力量</td>
+                    </tr>
+                    <tr>
+                        <td class="word">wrap</td>
+                        <td class="english-def">to put something firmly around something /somebody; to cover something completely in paper or other material</td>
+                        <td class="chinese-def">用……缠绕（或圈紧）；包，裹（礼物等）</td>
+                    </tr>
+                    <tr>
+                        <td class="word">bleed</td>
+                        <td class="english-def">(bled, bled) to lose blood, especially from a wound or an injury</td>
+                        <td class="chinese-def">流血；失血</td>
+                    </tr>
+                    <tr>
+                        <td class="word">bite</td>
+                        <td class="english-def">(bit, bitten) to use your teeth to cut into or through something</td>
+                        <td class="chinese-def">咬</td>
+                    </tr>
+                    <tr>
+                        <td class="word">defeat</td>
+                        <td class="english-def">failure to win or to be successful; to win against somebody in a war, competition, sports game, etc.</td>
+                        <td class="chinese-def">失败；击败，战胜</td>
+                    </tr>
+                    <tr>
+                        <td class="word">destroy</td>
+                        <td class="english-def">to damage something so badly that it no longer exists, works, etc.</td>
+                        <td class="chinese-def">摧毁</td>
+                    </tr>
+                    <tr>
+                        <td class="word">intelligent</td>
+                        <td class="english-def">(of an animal, a being, etc.) able to understand and learn things; good at learning, understanding</td>
+                        <td class="chinese-def">（动物、生物等）有智力的；有理解和学习能力的；有才智的；聪明的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">struggle</td>
+                        <td class="english-def">to fight somebody or try to get away from them; to try very hard to do something when it is difficult</td>
+                        <td class="chinese-def">搏斗；扭打；挣扎脱身；奋斗；努力</td>
+                    </tr>
+                    <tr>
+                        <td class="word">sink</td>
+                        <td class="english-def">(sank, sunk) to go down below the surface or towards the bottom of a liquid or soft substance</td>
+                        <td class="chinese-def">下沉</td>
+                    </tr>
+                    <tr>
+                        <td class="word">ahead</td>
+                        <td class="english-def">further forward in space or time; in front</td>
+                        <td class="chinese-def">（时间、空间）向前面，在前面</td>
+                    </tr>
+                    <tr>
+                        <td class="word">maintain</td>
+                        <td class="english-def">to make something continue at the same level, standard, etc.; to keep stating that something is true, even though other people do not agree</td>
+                        <td class="chinese-def">维持；保持；坚持（意见），固执己见</td>
+                    </tr>
+                    <tr>
+                        <td class="word">dramatically</td>
+                        <td class="english-def">by a strikingly large amount or to a strikingly large extent; greatly</td>
+                        <td class="chinese-def">巨大地</td>
+                    </tr>
+                    <tr>
+                        <td class="word">curious</td>
+                        <td class="english-def">having a strong desire to know about something</td>
+                        <td class="chinese-def">求知欲强的；好奇的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">shortage</td>
+                        <td class="english-def">a situation when there is not enough of the people or things that are needed</td>
+                        <td class="chinese-def">不足；缺少；短缺</td>
+                    </tr>
+                    <tr>
+                        <td class="word">grain</td>
+                        <td class="english-def">the small hard seeds of food plants such as wheat, rice, etc.; a single seed of such a plant</td>
+                        <td class="chinese-def">谷物；谷粒</td>
+                    </tr>
+                    <tr>
+                        <td class="word">decade</td>
+                        <td class="english-def">a period of ten years</td>
+                        <td class="chinese-def">十年，十年期（尤指一个年代）</td>
+                    </tr>
+                    <tr>
+                        <td class="word">self-sufficient</td>
+                        <td class="english-def">able to do or produce everything that you need without the help of other people</td>
+                        <td class="chinese-def">自给自足；自立的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">medal</td>
+                        <td class="english-def">a flat piece of metal, usually shaped like a coin, that is given to the winner of a competition</td>
+                        <td class="chinese-def">奖章；勋章</td>
+                    </tr>
+                    <tr>
+                        <td class="word">outstanding</td>
+                        <td class="english-def">extremely good; excellent</td>
+                        <td class="chinese-def">优秀的；杰出的；出色的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">institute</td>
+                        <td class="english-def">an organization that has a particular purpose, especially one that is connected with education or a particular profession</td>
+                        <td class="chinese-def">（教育、专业等）机构</td>
+                    </tr>
+                    <tr>
+                        <td class="word">request</td>
+                        <td class="english-def">the action of asking for something formally and politely</td>
+                        <td class="chinese-def">（正式或礼貌的）要求，请求</td>
+                    </tr>
+                    <tr>
+                        <td class="word">atmosphere</td>
+                        <td class="english-def">the mixture of gases that surrounds the Earth</td>
+                        <td class="chinese-def">（围绕地球的）大气，大气层</td>
+                    </tr>
+                    <tr>
+                        <td class="word">lack</td>
+                        <td class="english-def">the state of not having something or not having enough of something</td>
+                        <td class="chinese-def">缺乏；匮乏；短缺</td>
+                    </tr>
+                    <tr>
+                        <td class="word">clue</td>
+                        <td class="english-def">some words or a piece of information that helps you find the answers to a game or a question</td>
+                        <td class="chinese-def">提示词语，解答提示</td>
+                    </tr>
+                    <tr>
+                        <td class="word">literature</td>
+                        <td class="english-def">pieces of writing that are valued as works of art</td>
+                        <td class="chinese-def">文学；文学作品</td>
+                    </tr>
+                    <tr>
+                        <td class="word">failure</td>
+                        <td class="english-def">a person or thing that is not successful; lack of success in doing or achieving something</td>
+                        <td class="chinese-def">失败的人（或事物）；失败</td>
+                    </tr>
+                    <tr>
+                        <td class="word">realistic</td>
+                        <td class="english-def">accepting in a sensible way what it is actually possible to do or achieve in a particular situation</td>
+                        <td class="chinese-def">现实的；实际的；实事求是的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">professional</td>
+                        <td class="english-def">doing something as a paid job rather than as a hobby</td>
+                        <td class="chinese-def">专业的；职业的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">false</td>
+                        <td class="english-def">wrong; not correct or true</td>
+                        <td class="chinese-def">错误的；不正确的</td>
+                    </tr>
+                    <tr>
+                        <td class="word">permanently</td>
+                        <td class="english-def">lasting for a long time or for all time in the future</td>
+                        <td class="chinese-def">永久地；永恒地</td>
+                    </tr>
+                    <tr>
+                        <td class="word">setback</td>
+                        <td class="english-def">a difficulty or problem that delays or prevents something or makes a situation worse</td>
+                        <td class="chinese-def">挫折；阻碍</td>
+                    </tr>
+                    <tr>
+                        <td class="word">title</td>
+                        <td class="english-def">the name of a book, poem, painting, piece of music, etc.</td>
+                        <td class="chinese-def">（书、诗歌、图画、乐曲等的）名称，标题，题目</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="phrases-section">
+                <h2 class="section-title">短语和表达</h2>
+                <div class="phrase-item">
+                    <div class="phrase">spring roll</div>
+                    <div class="phrase-def">a type of Chinese fried food consisting of a tube of thin pastry, filled with vegetables or meat</div>
+                    <div class="phrase-def">春卷</div>
+                </div>
+                <div class="phrase-item">
+                    <div class="phrase">silicon chip</div>
+                    <div class="phrase-def">a very small piece of silicon used to carry a complicated electronic circuit</div>
+                    <div class="phrase-def">硅片</div>
+                </div>
+                <div class="phrase-item">
+                    <div class="phrase">solar-power battery</div>
+                    <div class="phrase-def">a kind of battery using the sun's energy</div>
+                    <div class="phrase-def">太阳能电池</div>
+                </div>
+                <div class="phrase-item">
+                    <div class="phrase">look forward to</div>
+                    <div class="phrase-def">to be thinking with pleasure about something that is going to happen</div>
+                    <div class="phrase-def">期待；盼望</div>
+                </div>
+                <div class="phrase-item">
+                    <div class="phrase">mother tongue</div>
+                    <div class="phrase-def">one's first language</div>
+                    <div class="phrase-def">母语</div>
+                </div>
+                <div class="phrase-item">
+                    <div class="phrase">cell phone</div>
+                    <div class="phrase-def">(American English) a mobile phone</div>
+                    <div class="phrase-def">移动电话；手机</div>
+                </div>
+                <div class="phrase-item">
+                    <div class="phrase">in addition</div>
+                    <div class="phrase-def">used when you want to mention another person or thing after something else</div>
+                    <div class="phrase-def">除……以外（还）</div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>英语词汇表 &copy; 2023 - 基于图片内容整理</p>
+        </footer>
+    </div>
+</body>
+</html>
