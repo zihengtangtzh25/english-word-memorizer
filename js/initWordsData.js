@@ -631,7 +631,209 @@ const INIT_WORDS_DATA = {
         "chinese": "（穿着、言语、行为等）适合正式场合的；正规的；庄重的",
         "english": "(of a style of dress, speech, writing, behaviour, etc.) very correct and suitable for official or important occasions"
         }
-  ]
+  ],
+  "必修34":[
+     {
+      "word": "abandon",
+      "partOfSpeech": "v.",
+      "chinese": "抛弃，放弃",
+      "english": "to leave somebody or something that you are responsible for, usually permanently"
+    },
+    {
+      "word": "accompany",
+      "partOfSpeech": "v.",
+      "chinese": "陪伴，伴随",
+      "english": "to travel or go somewhere with somebody"
+    }
+  ],
+  "必修unit3unit4":[
+        {
+        "word": "sum up",
+        "partOfSpeech": "phr.v.",
+        "chinese": "总结；概括",
+        "english": "to summarize"
+        },
+        {
+        "word": "fade away",
+        "partOfSpeech": "phr.v.",
+        "chinese": "（人）衰弱；病重死亡",
+        "english": "(of a person) to become very weak or ill and die"
+        },
+        {
+        "word": "climate",
+        "partOfSpeech": "n.",
+        "chinese": "气候",
+        "english": "the regular pattern of weather conditions of a particular place"
+        },
+        {
+        "word": "billion",
+        "partOfSpeech": "n.",
+        "chinese": "十亿",
+        "english": "one thousand million"
+        },
+        {
+        "word": "alarming",
+        "partOfSpeech": "adj.",
+        "chinese": "使人惊恐的；令人惊慌的",
+        "english": "causing worry and fear"
+        },
+        {
+        "word": "rate",
+        "partOfSpeech": "n.",
+        "chinese": "速度；进度",
+        "english": "a measurement of the speed"
+        },
+        {
+        "word": "predict",
+        "partOfSpeech": "v.",
+        "chinese": "预言；预告；预报",
+        "english": "to say that something will happen in the future"
+        },
+        {
+        "word": "chain",
+        "partOfSpeech": "n.",
+        "chinese": "一系列，一连串（人或事）；链子；锁链",
+        "english": "a series of connected things or people; a series of connected metal rings, used for pulling or fastening things"
+        },
+        {
+        "word": "hunt",
+        "partOfSpeech": "v.",
+        "chinese": "打猎；猎杀",
+        "english": "to chase wild animals or birds in order to catch or kill them for food, sport or to make money"
+        },
+        {
+        "word": "agriculture",
+        "partOfSpeech": "n.",
+        "chinese": "农业；农学",
+        "english": "the science or practice of farming"
+        },
+        {
+        "word": "figure",
+        "partOfSpeech": "n.",
+        "chinese": "（代表数量，尤指官方资料中的）数字",
+        "english": "a number representing a particular amount, especially one given in official information"
+        },
+        {
+        "word": "significantly",
+        "partOfSpeech": "adv.",
+        "chinese": "有重大意义地；显著地；明显地",
+        "english": "being important enough to have an effect on something or to be noticed"
+        },
+        {
+        "word": "unfamiliar",
+        "partOfSpeech": "adj.",
+        "chinese": "陌生的；不熟悉的",
+        "english": "strange"
+        },
+        {
+        "word": "youth",
+        "partOfSpeech": "n.",
+        "chinese": "（统称）青年，年轻人；青年时期（尤指成年以前）",
+        "english": "young people considered as a group; the time of life when a person is young, especially the time before a child becomes an adult"
+        },
+        {
+        "word": "threaten",
+        "partOfSpeech": "v.",
+        "chinese": "危及；对……构成威胁",
+        "english": "to be a danger to something"
+        },
+        {
+        "word": "extinction",
+        "partOfSpeech": "n.",
+        "chinese": "灭绝，绝种",
+        "english": "a situation where a plant, an animal, a way of life, etc. no longer exists"
+        },
+        {
+        "word": "admit",
+        "partOfSpeech": "v.",
+        "chinese": "（常指勉强）承认",
+        "english": "to agree, often unwillingly, that something is true"
+        },
+        {
+        "word": "somehow",
+        "partOfSpeech": "adv.",
+        "chinese": "不知为什么；以某种方式",
+        "english": "for a reason that you don't know or understand; in a way that is not known or certain"
+        },
+        {
+        "word": "measure",
+        "partOfSpeech": "n.",
+        "chinese": "措施；方法",
+        "english": "an official action that is done in order to achieve a particular aim"
+        },
+        {
+        "word": "absolutely",
+        "partOfSpeech": "adv.",
+        "chinese": "（强调真实无误）绝对地，完全地",
+        "english": "used to emphasize that something is completely true"
+        },
+        {
+        "word": "contrast",
+        "partOfSpeech": "v.",
+        "chinese": "对比；对照",
+        "english": "to compare two things in order to show the differences between them"
+        },
+        {
+        "word": "imply",
+        "partOfSpeech": "v.",
+        "chinese": "暗示；暗指",
+        "english": "to suggest that something is true or that you feel or think something, without saying so directly"
+        },
+        {
+        "word": "major",
+        "partOfSpeech": "adj.",
+        "chinese": "主要的；重要的",
+        "english": "very large or important"
+        },
+        {
+        "word": "available",
+        "partOfSpeech": "adj.",
+        "chinese": "可获得的；可购得的；可找到的",
+        "english": "that you can get, buy or find easily"
+        },
+        {
+        "word": "option",
+        "partOfSpeech": "n.",
+        "chinese": "选择；可选择的事物",
+        "english": "choice"
+        },
+        {
+        "word": "desire",
+        "partOfSpeech": "n.",
+        "chinese": "愿望；欲望；渴望",
+        "english": "a strong wish to have or do something"
+        },
+        {
+        "word": "reduce",
+        "partOfSpeech": "v.",
+        "chinese": "减少，缩小（尺寸、数量、价格等）",
+        "english": "to make something less or smaller in size, quantity, price, etc."
+        },
+        {
+        "word": "design",
+        "partOfSpeech": "v.",
+        "chinese": "设计；制图；构思",
+        "english": "to decide how something will look, work, etc., especially by drawing plans or making models"
+        },
+        {
+        "word": "balance",
+        "partOfSpeech": "v.",
+        "chinese": "同等重视（相对的两个事物或方面）",
+        "english": "to give equal importance to two contrasting things or parts of something"
+        },
+        {
+        "word": "graduate",
+        "partOfSpeech": "v./n.",
+        "chinese": "大学毕业；大学毕业生",
+        "english": "to get a degree from a university or college; a person who has a university degree"
+        },
+        {
+        "word": "plus",
+        "partOfSpeech": "conj.",
+        "chinese": "而且；此外；况且",
+        "english": "used to add more information"
+        }
+    ]
 };
 
 // 导出到全局作用域
