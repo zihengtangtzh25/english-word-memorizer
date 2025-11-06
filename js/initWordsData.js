@@ -644,9 +644,7 @@ const INIT_WORDS_DATA = {
       "partOfSpeech": "v.",
       "chinese": "陪伴，伴随",
       "english": "to travel or go somewhere with somebody"
-    }
-  ],
-  "必修unit3unit4":[
+    },
         {
         "word": "sum up",
         "partOfSpeech": "phr.v.",
